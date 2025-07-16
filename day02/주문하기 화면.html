@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width: 500px;
+            border: 1px solid black;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+        .good_img{
+            width: 350px;
+            height: 350px;
+            background-color: aqua;
+            background-image: url('https://cdn.ancnews.kr/news/photo/202101/11372_11417_150.png');
+            background-position: center;
+            background-size: cover;
+            margin: 0 auto;
+        }
+        .good_info{
+            /*border: 1px solid black;*/
+            width: 80%;
+            margin: 0 auto;
+
+
+        }
+        .order_wrap{
+            /*border: 1px solid black;*/
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        .order_wrap input{
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .order_wrap select{
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .order_wrap button{
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <!--상품 이미지 영역-->
+        <div class="goods">
+            <!--상품 이미지 -->
+            <div class="good_img">
+
+            </div>
+            <!--상품정보 -->
+            <div class="good_info">
+                <h1>대관령황태</h1>
+                <p>겨울내내 녹았다 얼었다를 반복한 맛좋은 대관령 황태입니다.</p>
+                <P>가격: <span>32,000원</span> 10마리</P>
+            </div>
+        </div>
+        
+        <!--주문영역-->
+        <div class="order_wrap">
+            <div>주문 내역</div>
+            <div>주문자 이름 <input type="text"></div>
+            <div>수량 
+                <select>
+                    <option value="">수량</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            <div>주문금액<input type="text"></div>
+            <div>전화번호<input type="text"></div>
+            <div><button>주문하기</button></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

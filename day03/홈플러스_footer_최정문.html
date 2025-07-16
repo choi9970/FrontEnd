@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .footer{
+            border: 1px solid black;
+            width: 1400px;
+            /*height: 400px;*/
+            padding: 10px;
+            
+        }
+        .footer_top{
+            /*border: 1px solid rgb(250, 5, 5);*/
+            width: 1400px;
+            /*height: 100px;*/
+            display: flex;
+            border-bottom:1px solid #ccc;
+        }
+        .footer_mid{
+            /*border: 1px solid rgb(187, 236, 7);*/
+            width: 1400px;
+            /*height: 200px;*/
+            display: flex;
+            font-size: 14px;
+            line-height: 14px;
+        }
+
+        .footer_last{
+            /*border: 1px solid rgb(5, 250, 46);*/
+            width: 100%;
+            border-top: 1px solid #ccc;
+
+            /*height: 100px;*/
+        }
+        .footer_top_first{
+            /*border: 1px solid rgb(5, 193, 250);*/
+            
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+            
+        }
+        .footer_top_first a {
+            text-decoration: none;
+            color: #666;
+            position: relative;
+            padding: 0 8px;
+        }
+
+        /* 세로줄 | 구분자 넣기 */
+        .footer_top_first a:not(:last-child)::after {
+            content: "|";
+            position: absolute;
+            right: 0;
+            color: #ccc;
+        }
+        .footer_top_second{
+            /*border: 1px solid rgb(9, 5, 250);*/
+            /*width: 20%;*/
+            margin: 0 auto;
+            border-left: 1px solid #ccc;
+            display: flex;
+            justify-content: center;
+        
+        }
+        .footer_top_second select{
+            border-style: none;
+            height: 100%;
+        }
+        .footer_top_second a{
+            text-decoration: none;
+            color: black;
+        }
+        
+        .footer_mid_first{
+            /*border: 1px solid rgba(250, 5, 38, 0.89);*/
+            width: 60%;
+            padding-left: 30px;
+        }
+        .footer_mid_second{
+            /*border: 1px solid rgba(5, 250, 238, 0.856);*/
+            width: 40%;
+            padding-left: 30px;
+            border-left: 1px solid #ccc;
+        }
+        .footer_last_last{
+            margin: 0 auto;
+            display: block;
+        }
+        .footer_last_last img{
+            width: 40px;
+        }
+        .footer_last_last > ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            }
+
+        .footer_last_last >ul> li {    
+            margin: 0 10px;
+        }
+        span{
+            font-size: 25px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="footer">
+        <!--top-->
+        <div class="footer_top">
+            <div class="footer_top_first">
+                    <a href="#">회사소개</a>
+                    <a href="#">공지사항</a>
+                    <a href="#">이용약관</a>
+                    <a href="#">개인정보처리방침</a>
+                    <a href="#">청소년 보호정책</a>
+                    <a href="#">입점·제휴문의</a>
+                    <a href="#">고객의견함</a>
+                    <a href="#">인재채용</a>
+            </div>
+            <div class="footer_top_second">
+                <a href="https://corporate.homeplus.co.kr/Store/HyperMarket.aspx"  class="btnStore" target="_blank">매장찾기</a>
+                <select><!--선택 하면 나머지 동작을 js로 처리-->
+                    <option value="상품권몰">상품권몰</option>
+                    <option value="홈플러스 문화센터">홈플러스 문화센터</option>
+                    <option value="공식블로그">공식블로그</option>
+                </select>    
+            </div>
+        </div>
+        <!--mid-->
+        <div class="footer_mid">
+            <div class="footer_mid_first">
+                <h2>홈플러스 주식회사</h2>
+                <p>대표이사: 조주연 | 주소: 서울특별시 강서구 화곡로 398(등촌동) | 사업자등록번호: 220-81-60348<br>
+                통신판매신고번호: 2016-서울강서-0451호 |사업자 정보 확인|청소년 보호책임자: 조혜영<br>
+                사이트 내에는 홈플러스㈜에 입점한 개별판매자가 판매하는 상품이 포함되어 있습니다.<br>
+                해당 상품의 경우 홈플러스㈜는 통신판매중개자로서 판매 당사자가 아니며, 상품정보 및 거래 등에 대한 책임을 지지 않습니다.</p>
+                
+                <p><strong>소비자피해보상보험</strong> 서비스 가입사실 확인</p>
+                
+                <p>고객님은 안전거래를 위해 현금 등으로 결제 시 저희 쇼핑몰에서 가입한 구매안전서비스 소비자 피해보상보험 서비스를 이용하실 수 있습니다.</p>
+                
+                <p>Copyright © Homeplus Co., LTD. All Rights Reserved.</p>
+            </div>
+            <div class="footer_mid_second">
+				<p><strong>고객센터</strong> <span>1577-3355</span> <br>
+				업무시간 : 09시 ~ 22시(명절당일 휴무)<br>
+				Email :onlinemart@homeplus.co.kr</p>
+				
+				<p><strong>분쟁처리</strong> <span>1577-3355</span> <br>
+				mail :onlinemart@homeplus.co.kr</p>
+				
+				<p>분쟁처리 절차</p>
+				<p>불법산품 신고하기</p>                
+            </div>
+        </div>
+        <!--last-->
+        <div class="footer_last">
+            <div class="footer_last_last">
+                <ul>
+                    <li><img src="https://www.usafe.co.kr/images/usafe_ci_white.png" alt="Cafe Messenger 로고"></li>
+                    <li><img src="https://kolsa.or.kr/wp-content/uploads/2022/12/kolsa_logo.png"></li>
+                    <li><img src="https://www.usafe.co.kr/images/usafe_ci_white.png" alt="Cafe Messenger 로고"></li>
+                    <li><img src="https://kolsa.or.kr/wp-content/uploads/2022/12/kolsa_logo.png"></li>
+                    <li><img src="https://www.usafe.co.kr/images/usafe_ci_white.png" alt="Cafe Messenger 로고"></li>
+                    <li><img src="https://kolsa.or.kr/wp-content/uploads/2022/12/kolsa_logo.png"></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

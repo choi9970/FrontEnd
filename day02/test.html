@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>겹치는 박스 예제</title>
+  <style>
+    .container {
+      position: relative;
+      width: 800px;
+      height: 400px;
+      margin: 50px auto;
+      background-color: #f0f0f0;
+    }
+
+    .box1, .box2 {
+      position: absolute;
+      width: 400px;
+      height: 300px;
+      top: 50px;
+      transition: 0.3s;
+    }
+    
+
+    .box1 {
+      left: 0;
+      background-color: rgba(255, 0, 0, 0.7); /* 반투명 빨강 */
+      z-index: 2; /* 더 위에 올라오게 */
+    }
+
+    .box2 {
+      left: 200px; /* box1에 절반 겹치도록 */
+      background-color: rgba(0, 0, 255, 0.7); /* 반투명 파랑 */
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="box1">1번 박스</div>
+    <div class="box2">2번 박스</div>
+  </div>
+
+</body>
+</html>

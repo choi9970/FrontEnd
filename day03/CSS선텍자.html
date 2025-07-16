@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    p{/*태그 선택자*/
+        background-color: red;
+    }
+    
+    .point{/*클레스 선택자*/
+        color: aqua;
+    }
+    
+    .wrap a{/*자손 선택자*/
+        /* 부모를 기준으로 그아래 어디든 상관없음*/
+        text-decoration: none;
+        color: #CCC;
+    }
+
+
+    /*자식 선택자 .wrap 기준으로 바로 아래에 있는 태그만 선택*/
+    .wrap2 > a{
+        text-decoration: none;
+        color: red;
+    }
+
+    .wrap2 > p{
+        
+        color: black;
+    }
+
+
+    </style>    
+</head>
+
+<body>
+    <h2>css 선택자</h2>
+    <ul>
+        <li>태그선택자</li>
+        <li>클래스 선택자</li>
+        <li>자존선택자</li>
+        <li>자식 선택자</li>
+    </ul>
+
+    <p>p태그입니다.1</p>
+    <p>p태그입니다.2</p>
+    <p>p태그입니다.3</p>
+
+    <h2 class="point">제목1</h2>
+    <h2 class="point">제목2</h2>
+    <h2 class="point">제목3</h2>
+
+    <div class="wrap">
+        <div>
+            <a href="https://www.naver.com/" target="_self">여기를 누르세요.네이버</a>
+        </div>
+    </div>
+
+    <div class="wrap2">
+        <div>
+            <a href="https://www.naver.com/" target="_self">여기를 누르세요.네이버</a>
+        </div>
+        <p>test</p>
+    </div>
+    
+</body>
+</html>
