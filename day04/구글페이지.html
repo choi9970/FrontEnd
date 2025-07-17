@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav{
+            height: 100px;
+            background-color: skyblue;
+            margin-top: 100px;
+            position: relative;
+
+        }
+        .title_wrap{
+            margin-top: 100px;
+            text-align: center;
+        }
+        .search_wrap{
+            margin-top: 100px;
+            height: 100px;
+            
+
+        }
+
+        /*검색바*/
+        .search_bar{
+           width: 600px;
+           height: 60px;
+           border: 1px solid #CCC;
+           border-radius: 30px;
+           text-align: center; 
+           margin: 0 auto;
+        }
+
+        .search_bar:hover{
+            box-shadow:  0px 0px 10px 0px rgb(143, 135, 135);
+             /*
+             수평, 좌우     음수(좌)  양수(우)
+             수직, 상하     음수(상)  양수(하)
+             흐림 : 그림자 테두리를 흐리게
+             번짐 : 그림자의 크기
+            */
+        }
+
+
+        .search_bar input{
+            margin-top: 10px;
+            width: 80%;
+            padding: 10px;
+            border: none;
+            outline:none;
+        }
+        .menu{
+            position: absolute;
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            right: 20px;
+            align-items: center;
+        }
+
+        .menu .item1{
+            border: 1px solid black;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            font-style: 12px;
+            line-height: 60px;
+            text-align: center;
+
+        }
+
+        .menu .item1:hover{
+            background-color: aqua;
+        }
+
+        .menu .item2{
+            width: 40px;
+            height: 40px;
+            background-color: green;
+            border-radius: 50%;
+            
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <!--nav-->
+    <div class="nav">
+        <ul class="menu">
+            <li class="item1">Gamil</li>
+            <li class="item1">로그인</li>
+            <li class="item1">이미지</li>
+            <li class="item2"></li>
+        </ul>
+    </div>
+    <!--구글 타이틀 영역-->
+    <div class="title_wrap">
+        <img src="https://www.google.co.kr/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png">
+    </div>
+    <!--검색바영역-->
+    <div class="search_wrap">
+        <!--검색바-->
+        <div class="search_bar">
+            <input type="text">
+        </div>
+
+    </div>
+
+</body>
+</html>

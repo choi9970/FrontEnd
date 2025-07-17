@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    ul{
+        border: 1px solid black;
+    }
+    ul>li {
+        
+        border: 1px solid blue;
+    }
+    .wrap{
+        border: 1px solid red;
+        display: flex;
+        flex-wrap: wrap;/*줄 바꾸기*/
+        width: 910px;
+        /*box-sizing: border-box; - 보더+padding을 포함해서 너비 계산*/
+        margin: 0 auto;
+        
+    }
+
+    .item {
+        border: 1px solid black;
+        width: 300px;
+        height: 300px;
+    }
+</style>
+</head>
+
+<body>
+    <ul>
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+    </ul>
+
+    <div class="wrap">
+        <div class="item">a</div>
+        <div class="item">b</div>
+        <div class="item">c</div>
+        <div class="item">a</div>
+        <div class="item">b</div>
+        <div class="item">c</div>
+    </div>
+</body>
+</html>

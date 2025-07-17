@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*메누영역*/
+        .nav{
+            height: 100px;
+            border: 1px solid black;
+            position: relative;
+        }
+        span{
+            display: block;
+        }
+        ul{
+           list-style: none;
+           display: flex; 
+        }
+        /*메뉴바*/
+        .menu{
+            width: 280px;
+            display: flex;
+            position: absolute;
+            right: 0;
+
+            font-size: 12px;
+        }
+        
+        .menu li {
+            padding: 10px;
+            flex-direction: column;  /* 세로 방향 정렬 */
+            align-items: center;     /* 가운데 정렬 */
+            border: 1px solid black;    
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <!--메뉴-->
+        <div class="menu">
+            <ul>
+                <li><img src="./Image1.png"><span>로그인</span></li>
+                <li><img src="./Image2.png"><span>내정보</span></li>
+                <li><img src="./Image3.png"><span>장바구니</span></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
