@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ /*1단*/       
+        .main_page{
+            width: 100%;
+            height: 100%;
+            border: 1px solid black;
+            
+        }
+        .main_top{
+            width: 100%;
+            display: flex;
+            border: 1px solid blue;
+        }
+        .main_logo{
+            border: 6px solid red;
+            width: 20%;
+        }
+        nav{
+            border: 6px solid red;
+            width: 80%;
+            position: relative;
+            
+        }
+        nav > ul {
+            list-style: none;
+            display: flex;
+            gap:30px;
+            position: absolute;
+            right: 30px;
+            
+            
+        }
+
+        .main_logo h1{
+            margin: 0;
+            padding: 0;
+        }
+        .menu_item{
+            position: relative;
+
+
+            z-index: 999;
+        }
+
+        .main_nav_sub{
+            position: absolute;
+            display: none;
+            top:100%;
+            left: 0;
+        }
+
+        .menu_item:hover .main_nav_sub{
+            display: block;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu_item_item{
+            position: relative;
+        }
+
+        .main_nav_sub_sub{
+            position: absolute;
+            display: none;
+            top:0%;
+            right: 100%;
+        }
+
+
+        .menu_item_item:hover .main_nav_sub_sub{
+            display: block;
+        }
+/*2단*/
+        .main_pic{
+            width: 100%;
+            height: 300px;
+            border: 6px solid rgba(55, 0, 255, 0.877);
+            background-image: url("./1000035382.jpg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;   
+        }
+        .main_pic::before{
+            position: absolute;
+            top:0%;
+            width: 100%;
+            height: 100%;
+            content: '';
+            background: linear-gradient(to right , black, transparent);  
+        }
+        .main_pic h2{
+            display: flex;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            justify-content: center; /* 가로 중앙 */
+            align-items: center;     /* 세로 중앙 */
+            height: 100%;
+            color: white;
+
+        }
+        .main_intro{
+            width: 100%;
+            height: 300px;
+            border: 1px solid purple;
+            display: flex;             /* flex 컨테이너 */
+            justify-content: center;   /* 가로 중앙 */
+            align-items: center;       /* 세로 중앙 */
+            
+        }
+        .intro_main{
+            width: 98%;
+            height: 95%;
+            border: 1px solid blue;
+            display: flex;             /* flex 컨테이너 */
+            justify-content: space-around;   /* 주위 공백 정렬 */
+            align-items: center;       /* 세로 중앙 */
+            
+        }
+        .intro_right, .intro_left{
+            width: 45%;
+            height: 90%;
+            border: 4px solid rgb(199, 9, 19);
+            
+        }
+        .skill_info{
+            width: 100%;
+            height: 50%;
+            border: 4px solid rgb(52, 11, 235);
+            
+        }
+
+        .person_info{
+            width: 100%;
+            height: 50%;
+            border: 4px solid rgb(52, 11, 235);
+            display: flex;
+        }
+
+        .person_img , .person_information{
+            width: 100%;
+            height: 100%;
+            border: 4px solid rgb(52, 11, 235);
+
+        }
+
+        .person_img img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .person_information p{
+            margin: 6px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+ <div class="main_page">
+<!--1단-->
+    <div class="main_top">
+        <div class="main_logo">
+            <!--<img src="" alt="">-->
+            <h1>DevFolio</h1>
+        </div>
+        <nav class="main_nav">
+            <ul>
+                <li class="menu_item"><a href="#">Home</a></li>
+                <li class="menu_item"><a href="#">About</a></li>
+                <li class="menu_item"><a href="#">Services</a></li>
+                <li class="menu_item"><a href="#">Portfolio</a></li>
+                <li class="menu_item">
+                    <a href="#">Dropdown</a>
+                    <ul class="main_nav_sub">
+                        <li class="menu_item_item"><a href="#">Dropdown_sub</a></li>
+                        <li class="menu_item_item">
+                            <a href="#">deep_Dropdown</a>
+                            <ul class="main_nav_sub_sub">
+                                <li class="menu_item_item_item"><a href="#">deep_Dropdown</a></li>
+                                <li class="menu_item_item_item"><a href="#">deep_Dropdown</a></li>
+                                <li class="menu_item_item_item"><a href="#">deep_Dropdown</a></li>
+                                <li class="menu_item_item_item"><a href="#">deep_Dropdown</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu_item_item"><a href="#">Dropdown_sub</a></li>            
+                    </ul>
+                </li>
+                <li class="menu_item"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>    
+<!--1단-->
+<!--2단-->
+    <div class="main_pic">
+        <h2>testtest</h2>
+    </div>
+<!--2단-->
+<!--3단-->
+    <div class="main_intro">
+        <div class="intro_main">
+            <div class="intro_right">
+                <!--개인 인포-->
+                <div class="person_info">
+                    <div class="person_img">
+                        <img src="./1000034931.jpg" alt="">
+                    </div>
+                    <div class="person_information">
+                        <p><strong>Name:</strong> Morgan Freeman</p>
+                        <p><strong>Profile:</strong> full stack developer</p>
+                        <p><strong>Email:</strong> contact@example.com</p>
+                        <p><strong>Phone:</strong> (617) 557-0089</P>
+                    </div>
+                </div>
+                <!--스킬 인포-->
+                <div class="skill_info">
+                    <h3>skill</h3>
+                    <!--스킬별 포인트-->
+                    <div class="skill_p"></div>
+                    <!--스킬별 포인트-->
+                    <div class="skill_p"></div>
+                </div>
+
+            </div>
+            <!--소개줄글-->
+            <div class="intro_left"></div>
+        </div>
+    </div>
+<!--3단-->
+
+</div>    
+</body>
+</html>

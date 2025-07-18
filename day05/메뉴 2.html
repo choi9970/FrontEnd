@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            border: 1px solid black;
+            
+        }
+        .menu{
+            display: flex;
+            border: 1px solid black;
+        }
+
+        .menu > li{
+            width: 200px;
+            border: 1px solid black;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        .menu_item{
+            width: 200px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            border: 1px solid black;
+            position:relative;
+            
+        }
+        .hidden_sub{
+            width: 100%;
+            border: 1px solid black;
+            font-size: 12px;
+            background-color: #ccc;
+            display: none;
+            position:absolute;
+            top:40px;
+            left: 0;
+
+        }
+        .menu_item:hover .hidden_sub{
+            display: block;
+            
+
+        }
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <!--상위 메뉴-->
+        <li class="menu_item"><a href="#">a</a>
+            <ul class="hidden_sub">
+                <li>a1</li>
+                <li>a1</li>
+                <li>a1</li>
+            </ul>
+        </li>
+        <li class="menu_item"><a href="#">a</a>
+            <ul class="hidden_sub">
+                <li>a1</li>
+                <li>a1</li>
+                <li>a1</li>
+            </ul>        
+        </li>
+        <li class="menu_item"><a href="#">a</a>
+            <ul class="hidden_sub">
+                <li>a1</li>
+                <li>a1</li>
+                <li>a1</li>
+            </ul>        
+        </li>
+        <li class="menu_item"><a href="#">a</a></li>
+        <li class="menu_item"><a href="#">a</a></li>
+    </ul>
+    
+</body>
+</html>
