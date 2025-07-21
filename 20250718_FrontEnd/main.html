@@ -59,7 +59,7 @@
             display: block;
         }
 
-        ul {
+        .main_nav ul {
             list-style: none;
             margin: 0;
             padding: 0;
@@ -112,7 +112,7 @@
         }
         .main_intro{
             width: 100%;
-            height: 300px;
+            /*height: 300px;*/
             border: 1px solid purple;
             display: flex;             /* flex 컨테이너 */
             justify-content: center;   /* 가로 중앙 */
@@ -120,7 +120,7 @@
             
         }
         .intro_main{
-            width: 98%;
+            width: 80%;
             height: 95%;
             border: 1px solid blue;
             display: flex;             /* flex 컨테이너 */
@@ -132,12 +132,6 @@
             width: 45%;
             height: 90%;
             border: 4px solid rgb(199, 9, 19);
-            
-        }
-        .skill_info{
-            width: 100%;
-            height: 50%;
-            border: 4px solid rgb(52, 11, 235);
             
         }
 
@@ -162,6 +156,155 @@
 
         .person_information p{
             margin: 6px;
+        }
+
+        .skill_info{
+            width: 100%;
+            height: 50%;
+            border: 4px solid rgb(52, 11, 235);
+        }
+
+        .skill_info > h3 {
+            margin: 0;
+        }
+        .skill_p{
+            width: 100%;
+            height: 30%;
+            border: 4px solid rgb(11, 235, 78);
+        }
+
+        .skill_name , .skill_per{
+            border: 4px solid rgb(218, 241, 6);
+            display: inline-block;
+            font-size: 10px;
+            color: #ccc;
+            margin: 0;
+            padding: 0;
+            height: 20px;
+        }
+        .skill_title{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .skill_bar{
+            border: 1px solid #ccc;
+            height: 10px;
+            display: flex;
+        }
+        .html_bar_yes{
+            background-color: aqua;
+            width: 100%;
+            height: 100%;
+        }
+        .html_bar_no{
+            background-color: rgb(255, 255, 255);
+            width: 0%;
+            height: 0%;
+        }
+
+        .css_bar_yes{
+            background-color: aqua;
+            width: 50%;
+            height: 100%;
+        }
+
+        .css_bar_no{
+            background-color: rgb(255, 255, 255);
+            width: 50%;
+            height: 100%;
+        }
+/*4단*/
+        .Resume_warp{
+            border: 1px solid salmon;
+            width: 100%;
+            /*height: 600px; 삭제*/
+        }
+        .Resume_title , .Services_warp{
+            border: 1px solid black;
+            height: 100px;
+            text-align: center;
+        }
+        .Resume_content_wrap{
+            border: 1px solid rgb(58, 9, 238);
+            /*height: 500px;*/
+            display: flex;
+            justify-content: space-evenly;
+            
+        }
+        .Resume_content{
+            border: 1px solid rgb(238, 9, 9);
+            width: 40%;
+            height: 100%;
+            
+        }
+        .one_Resume_content{
+            border-left: 5px solid skyblue;
+            position: relative;
+        }
+        .Resume_round_ball{
+            border: 5px solid skyblue;
+            position: absolute;
+            background-color: aliceblue;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            left: -15px;
+            top: -20px;
+            
+        }
+
+
+    </style>
+    <style>
+        .Services_warp{
+            border: 1px solid salmon;
+            width: 100%;
+            height: 1000px; /*삭제*/
+
+        }
+        .Services_content_wrap{
+            border: 1px solid rgb(8, 4, 204);
+            height: 100%;
+        }
+        .Services_content_wrap_sub{
+            border: 1px solid rgb(204, 4, 37);
+            height: 40%;
+            display: flex;
+            Justify-content: space-evenly;
+            /*position: relative;*/
+        }
+        .Services_content_wrap_content{
+            width: 30%;
+            height: 100%;
+            border: 9px solid rgb(3, 241, 202);
+            text-align: left;
+            display: flex;
+            flex-direction: column;       /* 세로 쌓기 */
+            justify-content: center;      /* 수직 중앙정렬 */
+
+        }
+        .Services_content_wrap_content_img{
+            background-position: center;
+            border: 9px solid rgb(49, 9, 158);
+        }
+        .Services_content_wrap_content_title{
+            border: 9px solid rgb(49, 9, 158);
+
+        }
+        .Services_content_wrap_content_plazer{
+            border: 9px solid rgb(49, 9, 158);
+
+        }
+        .Services_content_wrap_content:hover{
+            border-bottom: 15px solid blue;
+            /*position: absolute;*/
+            /*top: -20px;*/
+
+
+        }
+        .Services_content_wrap_content:hover .Services_content_wrap_content_title {
+            color: blue; 
         }
 
 
@@ -215,7 +358,7 @@
                 <!--개인 인포-->
                 <div class="person_info">
                     <div class="person_img">
-                        <img src="./1000034931.jpg" alt="">
+                        <img src="https://bootstrapmade.com/content/demo/DevFolio/assets/img/profile-img.jpg" alt="">
                     </div>
                     <div class="person_information">
                         <p><strong>Name:</strong> Morgan Freeman</p>
@@ -228,18 +371,191 @@
                 <div class="skill_info">
                     <h3>skill</h3>
                     <!--스킬별 포인트-->
-                    <div class="skill_p"></div>
+                    <div class="skill_p">
+                        <div class="skill_title">
+                            <div class="skill_name"><p>html</p></div>
+                            <div class="skill_per"><p>100%</p></div>
+                        </div>
+                        <div class="skill_bar">
+                            <div class="skill_yes html_bar_yes"></div>
+                            <div class="skill_no html_bar_no"></div>
+                        </div>
+
+                    </div>
                     <!--스킬별 포인트-->
-                    <div class="skill_p"></div>
+                    <div class="skill_p">
+                        <div class="skill_title">
+                            <div class="skill_name"><p>css</p></div>
+                            <div class="skill_per"><p>50%</p></div>
+                        </div>
+                        <div class="skill_bar">
+                            <div class="skill_yes css_bar_yes"></div>
+                            <div class="skill_no css_bar_no"></div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
             <!--소개줄글-->
-            <div class="intro_left"></div>
+            <div class="intro_left">
+                <h2>About me</h2>
+                <p>
+                    Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.Nulla porttitor accumsan tincidunt.<br> 
+                    <br>      
+                    Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. porttitor at sem.<br> 
+                </p>
+            </div>
         </div>
     </div>
 <!--3단-->
+<!--4단-->
+    <div class="Resume_warp">
+        <div class="Resume_title">
+            <h2>Resume</h2>
+            <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        </div>
+        <div class="Resume_content_wrap">
+            <div class="Resume_content">
+                <h2>Sumary</h2>
+                <div class="one_Resume_content">
+                    <div class="Resume_round_ball"></div>
+                    <h3>Brandon Johnson</h3>
+                    <p>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</p>
+                    <ul>
+                        <li>Portland par 127,Orlando, FL</li>
+                        <li>(123) 456-7891</li>
+                        <li>alice.barkley@example.com</li>
+                    </ul>
+                </div>
+                <h2>Education</h2>
+                <div class="one_Resume_content">
+                    <div class="Resume_round_ball"></div>
+                    <h3>Master of Fine Arts & Graphic Design</h3>
+                    <p>2015 - 2016</p>
+                    <p>Rochester Institute of Technology, Rochester, NY</p>
+                    <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
+                </div>
+                <div class="one_Resume_content">
+                    <div class="Resume_round_ball"></div>
+                    <h3>Bachelor of Fine Arts & Graphic Design</h3>
+                    <p>2010 - 2014</p>
+                    <p>Rochester Institute of Technology, Rochester, NY</p>
+                    <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
+                </div>
+            </div>
+            <div class="Resume_content">
+                <h2>Professional Experience</h2>
+                <div class="one_Resume_content">
+                    <div class="Resume_round_ball"></div>
+                    <h3>Senior graphic design specialist</h3>
+                    <p>2019 - Present</p>
+                    <p>Experion, New York, NY</p>
+                    <ul>
+                        <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
+                        <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project.</li>
+                        <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
+                        <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
+                    </ul>
+                </div>
+                <div class="one_Resume_content">
+                    <div class="Resume_round_ball"></div>
+                    <h3>Graphic design specialist</h3>
+                    <p>2017 - 2018</p>
+                    <p>Stepping Stone Advertising, New York, NY</p>
+                    <ul>
+                        <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
+                        <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
+                        <li>Recommended and consulted with clients on the most appropriate graphic design</li>
+                        <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
+                    </ul>
+                </div>
 
+            </div>
+        </div>
+    </div>
+<!--4단-->
+<!--5단-->
+    <div class="Services_warp">
+        <div class="Services_title">
+            <h2>Services</h2>
+            <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        </div>
+        <div class="Services_content_wrap">
+            <div class="Services_content_wrap_sub">
+                <div class="Services_content_wrap_content">
+                    <div class="Services_content_wrap_content_img">
+                        <img src="./스크린샷_2025-07-21_113815-removebg-preview.png" alt="">
+                    </div>
+                    <div class="Services_content_wrap_content_title">
+                        <h3>Nesciunt Mete</h3>
+                    </div>
+                    <div class="Services_content_wrap_content_plazer">
+                        <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
+                    </div>
+                </div>
+                <div class="Services_content_wrap_content">
+                    <div class="Services_content_wrap_content_img">
+                        <img src="./스크린샷_2025-07-21_113815-removebg-preview.png" alt="">
+                    </div>
+                    <div class="Services_content_wrap_content_title">
+                        <h3>Nesciunt Mete</h3>
+                    </div>
+                    <div class="Services_content_wrap_content_plazer">
+                        <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
+                    </div>
+                </div>
+                <div class="Services_content_wrap_content">
+                    <div class="Services_content_wrap_content_img">
+                        <img src="./스크린샷_2025-07-21_113815-removebg-preview.png" alt="">
+                    </div>
+                    <div class="Services_content_wrap_content_title">
+                        <h3>Nesciunt Mete</h3>
+                    </div>
+                    <div class="Services_content_wrap_content_plazer">
+                        <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
+                    </div>
+                </div>                            
+            </div>
+            <div class="Services_content_wrap_sub">
+                <div class="Services_content_wrap_content">
+                    <div class="Services_content_wrap_content_img">
+                        <img src="./스크린샷_2025-07-21_113815-removebg-preview.png" alt="">
+                    </div>
+                    <div class="Services_content_wrap_content_title">
+                        <h3>Nesciunt Mete</h3>
+                    </div>
+                    <div class="Services_content_wrap_content_plazer">
+                        <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
+                    </div>
+                </div>
+                <div class="Services_content_wrap_content">
+                    <div class="Services_content_wrap_content_img">
+                        <img src="./스크린샷_2025-07-21_113815-removebg-preview.png" alt="">
+                    </div>
+                    <div class="Services_content_wrap_content_title">
+                        <h3>Nesciunt Mete</h3>
+                    </div>
+                    <div class="Services_content_wrap_content_plazer">
+                        <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
+                    </div>
+                </div>
+                <div class="Services_content_wrap_content">
+                    <div class="Services_content_wrap_content_img">
+                        <img src="./스크린샷_2025-07-21_113815-removebg-preview.png" alt="">
+                    </div>
+                    <div class="Services_content_wrap_content_title">
+                        <h3>Nesciunt Mete</h3>
+                    </div>
+                    <div class="Services_content_wrap_content_plazer">
+                        <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
+                    </div>
+                </div>                            
+            </div>
+
+        </div>
+
+    </div>
+<!--5단-->
 </div>    
 </body>
 </html>
