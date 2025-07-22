@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    8. 점수에 따른 등급 
+사용자가 입력한 점수에 따라 다음 등급을 출력하세요:
+
+90점 이상: "A"
+80점 이상: "B"
+70점 이상: "C"
+60점 이상: "D"
+60점 미만: "F"<br>
+
+<script>
+    let input=prompt("점수입력");
+    if(input >= 90){
+        document.writeln(input+"점"+"A");
+
+    }else if(input >= 80){
+        document.writeln(input+"점"+"B");
+    }else if(input >= 70){
+        document.writeln(input+"점"+"C");
+    }else if(input >= 60){
+        document.writeln(input+"점"+"D");
+    }else{
+        document.writeln(input+"점"+"F");
+    }
+    
+</script>
+    
+</body>
+</html>

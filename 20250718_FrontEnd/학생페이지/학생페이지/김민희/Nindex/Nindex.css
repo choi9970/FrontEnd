@@ -1,0 +1,670 @@
+/* html - base.css*/
+/* body - base.css*/
+/* header - base.css*/
+
+/* index-1-main */
+.index-1-main {
+  display: flex;
+  width: 100%;
+  height: auto;
+  padding-top: 10rem;
+  background: linear-gradient(180deg, #EAEEFE 40%, #312E81 100%);
+}
+.main-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 120rem;
+  height: 92.4rem;
+  margin: 0 8rem;
+}
+.main-left {
+  height: 92.4rem;
+}
+.catchphrase {
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 1.4;
+  margin:0 0 5rem 0;
+}
+.catchphrase .highlight {
+  color: #6366F1;
+  font-weight: 700;
+}
+.main-title {
+  font-size: 8.8rem;
+  font-weight: 700;
+  margin: 0 0 2.3rem 0;
+}
+.main-img {
+  width: 60rem;
+  height: 55.4rem;
+}
+.main-right {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: 47rem 0  auto;
+}
+.sub-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+.main-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2.8rem;
+  margin: 11rem 0 auto 0;
+}
+.main-create-btn {
+  color: #fff;
+  padding: 2.6rem 4rem;
+  font-size: 3.6rem;
+  font-weight: 900;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: linear-gradient(270deg, #312e81, #7e75e1, #312e81);
+  background-size: 400% 400%;
+  transition: all 0.3s ease;
+  animation: gradientMove 4s ease-in-out infinite;
+}
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.main-learn-more-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  color: #000;
+  font-size: 2.4rem;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+}
+.icon-arrow {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+/* index-2-preview */
+#index-2-preview{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 120rem;
+  margin: 20rem auto 10rem;
+  gap: 10rem;
+  background-color: #fff;
+}
+.preview-title p {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin: 0;
+}
+.preview-container {
+  display: grid;
+  width: 116rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  margin: 0 auto;
+    overflow: visible;
+  position: relative;
+}
+.preview-box {
+  width: 36rem;
+  height: 27rem;
+  aspect-ratio: 4/ 3;
+  border: 1px solid #cccccc;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+.preview-box:hover {
+  transform: scale(1.5);
+  z-index: 100;
+  position: relative;
+}
+.preview-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/**index-3-aboutus**/
+#index-3-aboutus{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 120rem;
+  margin: 10rem auto 0;
+  background-color: #fff;
+}
+.aboutus-title p{
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin: 0;
+}
+.aboutus-sub-title p {
+  font-style: italic;
+  font-size: 4rem;
+  font-weight: 800;
+  color: #312E81;
+  margin: 15rem auto 20rem ;
+}
+
+/*****index-3-aboutus** Step by Step */
+.aboutus-process-list {
+  width: 112.2rem;
+  display: flex;
+  gap: 3rem;
+  margin: 0 auto 15rem;
+}
+.process-card {
+  width: 25.8rem;
+  height: 28.5rem;
+  background: url('/img/index-process-stroke.png') no-repeat center / contain;
+  background-color: white;
+}
+.process-title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 0 0 0 8rem;
+}
+.process-desc {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.8;
+  margin: 4rem auto auto 3rem;
+}
+
+/*****index-3-aboutus**Tools section */
+.aboutus-tools-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 114rem;
+  gap: 4rem 3rem;
+  margin: 0 auto 10rem;
+}
+.tool-card {
+  width: 32rem;
+  height: 37rem;
+  background: #c6c7c8;
+  border-radius: 20px;
+  padding: 4rem 0 0 4rem;
+  text-align: left;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+.tool-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+.tool-icon{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 8rem;
+  height: 8rem;
+  background-color: #312E81;
+  border-radius: 50%;
+}
+.tool-icon img{
+  width: 5.6rem;
+}
+.tool-name {
+  font-size: 2.8rem;
+  margin: 2rem 0 1.5rem 0;
+}
+.tool-desc {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  margin: 3rem auto;
+}
+
+
+/*****index-3-aboutus Feature section */
+#aboutus-sub-sub-title  {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 2.5;
+  margin: 15rem auto 20rem;
+}
+.aboutus-feature-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+  width: 101rem;
+  margin: 0 auto 40rem;
+}
+.feature {
+  text-align: center;
+  background: linear-gradient(135deg, #BBC5CC, #312E81);
+  color: white;
+  padding: 7rem 0;
+  border-radius: 30px;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.feature-front{
+  font-size: 3.2rem;
+  font-weight: 600;
+  text-shadow: 5px 5px 5px #757B80;
+    transform: rotateY(0deg);
+}
+.feature-back {
+  font-size: 2rem;
+  display: none;
+    transform: rotateY(180deg);
+}
+.feature.flipped .feature-front {
+  display: none;
+    transform: rotateY(180deg);
+}
+.feature.flipped .feature-back {
+  display: block;
+    transform: rotateY(360deg);
+}
+
+/* FAQ -Review*/
+.aboutus-faq-review {
+  width: 120rem;
+  background-color: #3730A3;
+}
+.faq-wrapper{
+  display: flex;
+  margin: 5rem auto 0;
+}
+.faq-wrapper img{
+  width: 58.4rem;
+  height: 78.7rem;
+}
+.faq{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 20rem 2rem auto ;
+}
+.faq-title{
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #FFC973;
+  margin: 0 0 10rem 0;
+}
+.faq-q {
+  font-size: 2.6rem;
+  font-weight: 400;
+  color: white;
+  padding: 3rem 0;
+  border: none;
+  border-bottom: 1px solid #FFC973;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.faq-a {
+  font-size: 2rem;
+  font-weight: 400;
+  color: white;
+  background-color: #312E81;
+  padding: 3rem 2rem;
+  display: none;
+}
+.faq-q:hover {
+  background-color: #312E81;
+}
+.faq-q.active::after {
+  content: " ▲";
+}
+.faq-q::after {
+  content: " ▼";
+  float: right;
+}
+
+/* Review */
+.review {
+  color: white;
+  text-align: center;
+}
+
+.review-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #FFC973;
+  margin: 0 0 10rem 0;
+}
+
+.review-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.review-container {
+  display: flex;
+  overflow: hidden;
+  gap: 1rem;
+  scroll-behavior: smooth;
+}
+
+.review-card {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 32rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.review-card:nth-child(2n) {
+  background-color: #2e2384;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.review-avatar img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
+
+.review-star {
+  font-size: 1.5rem;
+  margin: 0.3rem 0;
+  color: #fbc96f;
+}
+
+.review-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.review-email {
+  font-size: 1.5rem;
+}
+
+.review-arrow {
+  background: none;
+  border: none;
+  font-size: 4rem;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+.review-submit {
+  margin-top: 4rem auto;
+  text-align: center;
+}
+.review-submit-btn {
+  font-size: 1.4rem;
+  background: none;
+  color: white;
+  padding: 1.3rem 3rem;
+  margin: 4rem auto 10rem;
+  border-radius: 6px;
+  border: 1px solid white;
+  cursor: pointer;
+}
+.review-submit-btn:hover {
+  background-color: #666;
+}
+.review-form {
+  background-color: #666;
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem auto;
+  display: none;
+  color: #fff;
+}
+.review-form h3{
+  font-size: 2rem
+}
+.review-form input{
+  width: 40%;
+  color: white;
+}
+.review-form select{
+  display: inline-block;
+   background-color: yellow;
+  width: 30%;
+}
+.review-form textarea{
+  width: 71%;
+}
+.review-form input,
+.review-form select,
+.review-form textarea {
+  margin: 0.6rem;
+  padding: 1.2rem;
+  background-color: white;
+  color: black;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+.review-form-btns {
+  margin: 2rem;
+}
+.review-submit-ok,
+.review-close {
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 1rem 3rem;
+  margin: 0 1.5rem;
+  background: none;
+  color: white;
+  border: 1px solid #999;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.review-submit-ok:hover,
+.review-close:hover{
+  background-color: #555;
+}
+/* About Us */
+#aboutus p{
+  font-size: 1.2rem;
+  margin-top: 4rem;
+  color: #555;
+}
+.aboutus-feature-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 5rem 3rem;
+}
+.aboutus-icon {
+  position: relative;
+  width: 33rem;
+  height: 12rem;
+  margin: auto;
+  perspective: 1000px;
+  cursor: pointer;
+}
+.aboutus-icon .aboutus-front,
+.aboutus-icon .aboutus-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #B3AFC3, #282837);
+  backface-visibility: hidden;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: white;
+  padding: 1rem;
+  box-sizing: border-box;
+  transition: transform 0.8s;
+}
+.aboutus-front {
+  background-color: #666;
+  transform: rotateY(0deg);
+}
+.aboutus-back {
+  background-color: #444;
+  transform: rotateY(180deg);
+}
+.aboutus-icon.flipped .aboutus-front {
+  transform: rotateY(180deg);
+}
+
+.aboutus-icon.flipped .aboutus-back {
+  transform: rotateY(360deg);
+}
+.aboutus-team, .aboutus-timeline {
+  font-size: 1.1rem;
+  margin-top: 4rem;
+  color: #555;
+}
+
+.aboutus-faq-review-bottom{
+  width: 100%;
+  text-align: center;
+  background-color: #3730A3;
+}
+.aboutus-faq-review-bottom p{
+  font-size: 20px;
+  color: #fff;
+}
+.aboutus-faq-review-bottom button{
+  margin: 150px auto;
+}
+/* Footer */
+footer {
+  width: 120rem;
+  margin: 0 auto;
+  background-color: #000;
+  color: #fff;
+  padding: 3rem;
+  box-sizing: border-box;
+}
+.footer-logo-icon img {
+  width: 12.6rem;
+  height: 5.13rem;
+}
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 4rem 9rem 2rem;
+}
+.footer-left, .footer-right{
+  flex: 1;
+  width: 48rem;
+}
+.footer-title {
+  font-size: 2.4rem;
+  font-weight: 900;
+  margin: 0 0 3rem 0;
+  padding: 0;
+}
+.footer-sub-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 5rem 0;
+  padding: 0;
+}
+.footer-developer {
+  gap: 1.6rem;
+  margin: 0 0 5rem 0;
+}
+.footer-timeline {
+  gap: 1.6rem;
+  margin: 0 0 3rem 0;
+}
+.footer-developer .developer
+.footer-timeline .timeline {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.footer-developer .developer-name 
+.footer-timeline .timeline-list{
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.footer-subscribe .subscribe {
+  font-size: 2.4rem;
+  font-weight: 900;
+  margin: 0 0 1.6rem 0;
+}
+.subscribe-form {
+  display: flex;
+  width: 80%;
+  background-color: white;
+  border-radius: 4rem;
+  margin: 0 0 5rem 0;
+}
+.subscribe-form input {
+  flex: 1;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  border-radius: 4rem;
+}
+.subscribe-form button {
+  margin: 0.5rem 1rem;
+  padding: 1.5rem;
+  background-color: #000;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 4rem ;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.subscribe-form button:hover {
+  background-color: #3730A3;
+}
+.footer-sns .sns-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 4rem 0;
+}
+.sns-icons{
+  display: flex;
+  gap: 5rem;
+}
+.youtube-icon{
+  width: 12rem;
+}
+.instagram-icon{
+  width: 16.8rem;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  border-top: 1px solid #fff;
+  padding-top: 4rem;
+}

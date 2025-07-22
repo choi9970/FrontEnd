@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    4. 최대값 구하기    
+  사용자가 입력한 세 개의 숫자 중 가장 큰 숫자를 출력하세요. 
+
+  <script>
+    let input=prompt("숫자 3개 입력 ( ex) 2,53,8 )")
+    let arr=input.split(",").map(Number);
+    console.log(arr);
+
+    let max=0;
+
+    for(let i=0;i < arr.length; i++){
+        console.log(i);
+        console.log(arr[i]);
+        if(max < arr[i]){
+            max=arr[i];
+        }
+    }
+    
+    document.writeln("최대수는"+max)
+  </script>
+
+</body>
+</html>

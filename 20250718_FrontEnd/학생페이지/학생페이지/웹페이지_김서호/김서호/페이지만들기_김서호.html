@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+        .wrap {
+
+            border: 1px solid black;
+        }
+
+
+
+        .header {
+
+            border: 1px solid black;
+            height: 100px;
+
+            background-color: #6b90dc
+        }
+
+
+
+        .contnet {
+
+            border: 1px solid black;
+            /*height: 100px;*/
+
+        }
+
+
+        .title {
+
+            display: flex;
+            /* background-color: blue;*/
+
+
+        }
+
+
+        .title>div {
+            border: 1px solid black;
+        }
+
+        .title .col1 {
+            width: 90%;
+        }
+
+        .title .col2 {
+
+            width: 10%;
+        }
+
+
+        .login {
+            border: 1px solid rgb(250, 244, 244);
+            font-size: 10px;
+
+            color: wheat;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .content-line2 {
+
+            border-top: 1px solid #ccc;
+
+            border-bottom: 1px solid #ccc;
+        }
+
+
+        .menu {
+            list-style: none;
+            display: flex;
+
+        }
+
+        .menu li {
+
+            padding: 20px;
+        }
+
+        .search-bar {
+            text-align: right;
+        }
+
+        .introduce {
+            text-align: left;
+        }
+
+        .footer {
+            background-color: skyblue;
+            color: white;
+            text-align: center;
+            padding: 20px;
+
+            font-size: 11px;
+            
+        }
+        .footer3{
+            border: 1px solid black;
+          
+            display: flex;
+
+
+
+
+        }
+
+         .footer3 > div{
+            width: 33.3%;
+         }
+
+        .container {
+            display: flex;
+            flex: 1;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            background-color: white;
+            text-align: center;
+            border: 2px solid red;
+        }
+
+        .three-columns {
+            display: flex;
+            width: 100%;
+        }
+
+        .column {
+            flex: 1;
+            padding: 20px;
+            background-color: #ddd;
+            border-right: 1px solid white;
+        }
+
+        .column:last-child {
+            border-right: none;
+        }
+
+        .content .line1 {
+            display: flex;
+        }
+
+
+
+        .ct1,
+        .ct2,
+        .ct3 {
+            width: 33.3%;
+            border: 1px solid red;
+            
+            
+        }
+
+
+        .ct1 {
+            text-align: left;
+
+            
+        }
+        .ct3 img{
+            width: 80px;
+            height: 30px;
+            text-align: right
+        }
+
+
+        .product{
+            display: flex;
+
+        }
+        .product ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            border: 1px solid black;
+            padding: 0;
+            margin: 0 auto;
+        }
+
+
+        /* 상품 박스 */
+
+        .product li {
+            border: 1px solid black;
+            width: 300px;
+            height: 300px;
+            text-align: center;
+            margin: 20px;
+            
+        }
+
+        .product li img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="wrap">
+
+
+        <!-- header영역-->
+
+
+        <div class="header">
+
+            <div class="title">
+                <div class="col1"><a href="https://www.naver.com" target="_blank" class="naver-link"><img src="images/bag3.png"></a></div>
+
+                <div class="col2">
+                    <span class="login"> 로그인</span>
+
+                </div>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="검색어를 입력하세요" />
+
+                <hr>
+
+                <!---->
+
+                <div class="introduce">40년 경력의 우산전문가가 운영하는 우산도소매가게 입니다
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- content-->
+
+        <!--내용영역-->
+
+        <div class="content">
+            <!--line1 -->
+            <div class="line1">
+                <div class="ct1">
+                   <img src="images/bag.png" alt="알림받기"
+                    width="120" height="30">
+                </div>
+                <div class="ct2">
+                    <img
+                        src="https://shop-phinf.pstatic.net/20211022_208/1634883162341A8WSE_PNG/%BF%AC%C8%EF%BB%E7ci.png?type=w640">
+
+                </div>
+                <div class="ct3">
+                  <img src="images/bag2.png" alt="조회수"
+                    width="120" height="30">
+                </div>
+            </div>
+
+
+            <!-- line2-->
+            <div class="content-line2">
+                <ul class="menu">
+
+                    <li>베스트</li>
+                    <li>3단우산</li>
+                    <li>2단우산</li>
+                    <li>장우산</li>
+                    <li>전체상품</li>
+                    <li>묻고 답하기</li>
+                    <li>공지사항</li>
+                    <li>리뷰이벤트</li>
+                    <li>쇼핑스토리</li>
+                    <li>판매자 정보</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- line3-->
+
+        <div class="container">
+            <div class="content">주간베스트</div>
+        </div>
+
+
+
+        <!--line4-->
+        <div class="product">
+
+            <ul>
+                <li>
+                    <img
+                        src="https://shop-phinf.pstatic.net/20211022_204/1634886373274FwtI0_PNG/36022261560931806_1761010890.png?type=f750_974">
+
+                    <h3>협립 2단 반자동 8k 우산</h3>
+                    <p> 11,900원</p>
+                </li>
+
+                <li>
+                    <img
+                        src="https://shop-phinf.pstatic.net/20230508_245/1683533827405GxJEy_JPEG/1209948230469875_853649008.jpg?type=f750_974">
+
+                    <h3>잭니클라우스 2단 엠보바이어스</h3>
+                    <p> 11,900원</p>
+                </li>
+
+                <li>
+                    <img
+                        src="https://shop-phinf.pstatic.net/20201111_277/1605074692128P7oU6_JPEG/6210590831300237_52775832.jpg?type=f750_974">
+
+                    <h3>크로커다일 70 16K 멜빵 자동장우산</h3>
+                    <p> 11,900원</p>
+                </li>
+
+                <li>
+                    <img
+                        src="https://shop-phinf.pstatic.net/20230508_67/16835302133118K10u_JPEG/17557535227322496_165167241.jpg?type=f750_974">
+
+                    <h3>파라체이즈 특대형 장우산</h3>
+                    <p> 25,000원</p>
+                </li>
+            </ul>
+
+        </div>
+
+
+
+    </div>
+
+
+
+    <!--footer-->
+    <div class="footer">푸터 영역
+        <div>!반품 배송비, 반품 배송주소 등은 해당 상품 페이지 내 안내를 참고해주세요.연흥사연경숙인증판매자 상세정보 확인</div>
+        <div>네이버 약관네이버페이 이용약관전자금융거래 이용약관개인정보처리방침책임의 한계와 법적고지청소년보호정책권리보호센터안전거래 가이드쇼핑&페이 고객센터</div>
+        <div class="footer3">
+            <div class="1">네이버㈜
+사업자등록번호 220-81-62517통신판매업신고번호 2006-경기성남-0692호
+대표이사 최수연 경기도 성남시 분당구 정자일로 95, NAVER 1784, 13561
+전화 1588-3819이메일 helpcustomer@naver.com사업자등록정보 확인
+호스팅 서비스 제공 : NAVER Cloud</div>
+            <div class="2">고객센터
+강원도 춘천시 퇴계로 89 강원전문건설회관
+전화 1588-3819전화전클릭
+결제도용신고 1588-3816
+1:1문의 바로가기</div>
+            <div class="3">전자금융거래 분쟁처리
+전화 1588-3819
+1:1문의 바로가기</div>
+        </div>
+        <div>네이버㈜는 통신판매중개자이며, 통신판매의 당사자가 아닙니다. 상품, 상품정보, 거래에 관한 의무와 책임은 판매자에게 있습니다.자세히보기</div>
+    </div>
+    </div>
+
+</body>
+
+</html>

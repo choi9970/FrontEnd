@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    12. 홀수만 출력
+  사용자가 입력한 숫자 N까지의 숫자 중 홀수만 출력하세요.<br>
+  <script>
+    let input=prompt("숫자 N까지의 숫자 (ex> 2,5,1,2,5,4,1,5165,5165,154161)");
+    let arr=input.split(",").map(Number);
+    let i=0;
+    while(i<arr.length){
+        if(arr[i]%2 !== 0){
+            document.writeln(arr[i]+"는 홀수<br>");
+
+        }
+        i++;
+    }
+  </script>
+</body>
+</html>

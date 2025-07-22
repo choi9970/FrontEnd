@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    11. 사칙연산 계산기  (if, switch문)
+사용자가 입력한 두 숫자와 연산자(+, -, *, /)를 사용하여 결과를 출력하세요.<br>
+
+<script>
+
+let input=prompt("숫자 2개,연산자(+, -, *, /) 입력 ( ex) 2,+,53 )")
+let arr=input.split(",")
+arr[0] = Number(arr[0]), arr[2] = Number(arr[2]);
+let answer=0;
+switch (arr[1]){
+    case "+": 
+      answer = arr[0]+arr[2];
+      break; 
+    case "-":
+      answer = arr[0]-arr[2];
+      break;
+    case "*":
+      answer = arr[0]*arr[2];
+      break;
+    case "/":
+      answer = arr[0]/arr[2];
+      break; 
+  }
+  alert(answer);
+
+
+</script>
+
+</body>
+</html>
