@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //입력 매개변수
+        //반환 (함수가 기능을 수행한 값을 돌려줄 수 있다.)
+
+        function test(input){
+            for(let j=1;j<input;j++){
+                let rexult=4;
+                document.write("치약");
+                document.write("양치질");
+                document.write("행굼");
+                return rexult;
+            }
+            
+        }
+        
+        test(4);
+        //함수가 호출되면 기능을 수행하고 호출한 곳으로 돌아옴
+        console.log(test(3));
+
+        for(let i=1;i<2;i++){
+            test();
+        }
+    </script>
+</body>
+</html>
