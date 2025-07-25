@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //전역변수:함수 외부에서 만들어지는 변수
+
+        let num =0;
+       function test1(num1,num2){ //  매개 변수
+            num++;
+       }
+
+       function test2(num1,num2){ //  매개 변수
+            num++;
+       }
+       //
+       
+       console.log(num);
+       //함수 안에서 만든 변수 함수 밖에서 사용 불가
+       test1();
+       console.log(num);
+
+       test1();
+       console.log(num);
+
+       test2();
+       console.log(num);
+
+    </script>
+    
+</body>
+</html>

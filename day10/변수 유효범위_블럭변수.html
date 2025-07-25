@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        *변수 선언 위치에 따라 전역변수,지역(함수),
+        */
+       //블럭 변수
+
+       for(let i=0;i<9;i++){
+            console.log(i);
+
+       }//for 블럭 끝
+       console.log(i);//undefined
+
+       if(5>3){
+        let result="5가 크다."
+        console.log(result);
+       }
+
+
+    </script>
+    
+</body>
+</html>

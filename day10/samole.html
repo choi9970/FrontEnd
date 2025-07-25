@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // console.log(  week1[0]);
+        //week1 = [ "apple", "banana", "cat", "dog", "elephant", "flower", "guitar" ];
+        for (let i=1;i<9;i++){
+            for (let j=0;j<7;j++){
+                document.writeln("console.log( week"+i+"["+j+"]);<br>");
+            }
+        }
+
+
+
+        let input="apple,banana,cat,dog,elephant,flower,guitar,house,internet,jungle,kangaroo,lion,moon,nest,orange,piano,queen,rabbit,sun,tree,umbrella,vase,water,xylophone,yacht,zebra,ant,ball,car,door,egg,fire,garden,hat,ice,jacket,key,lamp,mouse,note,orange,pencil,queen,rain,sun,table,umbrella,vase,water,xylophone,yacht,zebra,apple,banana,cat,dog";
+        input=input.split(",");
+        console.log(input);
+        
+        //let word1 ="apple";
+        input.forEach((p,i) => {
+            document.writeln(`let word${i + 1} = "${p}";<br>`);
+        });
+
+        //console.log( word1);
+
+        input.forEach((p,i) => {
+            document.writeln(`console.log( word${i + 1});<br>`);
+        });
+
+
+        /**
+         * let week1 = [ "apple" ,  "banana" ,  "cat"  , "dog"  ,   "elephant" , "flower"   , "guitar" ];
+            let week2 = [ ];
+            let week3 = [ ]; 
+            let week4 = [ ];
+        */
+        let j=1;
+        let u=1;
+        for(let i=1;i<input.length+1;i++){
+            if(i % 7 === 1){
+                document.writeln("[");
+                u++;
+            }
+            document.writeln("\""+input[i-1]+"\",");
+            if(i%7==0){
+                document.writeln("],<br>");
+                j++;
+            }
+
+        }
+
+
+    </script>
+    
+</body>
+</html>
