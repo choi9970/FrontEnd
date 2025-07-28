@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>공공데이터 API 콘솔 출력</title>
+</head>
+<body>
+  <script>
+    const axios = require("axios");
+
+    const getLotto = async (round) => {
+    const url = `https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=${round}`;
+    const res = await axios.get(url);
+    console.log(res.data);
+    };
+
+    getLotto(100);
+  </script>
+</body>
+</html>
