@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //함수선언식: function test() {
+        //함수선언식으로 작성한 함수는 호이스팅됨.
+        //호이스팅 => 함수선언식으로 만든 함수는 먼저 해석.
+        function test() {
+            let sum=0;
+
+            for (let index = 0; index < 10; index++) {
+                sum+=index;
+                
+            }
+
+            alert(sum);    
+        }
+
+        test();
+
+         function testVer2() {
+            let sum=0;
+
+            for (let index = 0; index < 10; index++) {
+                sum+=index;
+                
+            }
+
+            return sum;    
+        }
+
+       let result= testVer2();
+        
+    </script>
+</body>
+</html>

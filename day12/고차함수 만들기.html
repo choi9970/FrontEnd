@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /**
+        function hi(name)[
+            alert("hi"+name);
+        ]
+
+        hi("sdg");
+
+        function hi2(name) {
+            alert("hi2"+name);
+        }
+
+        hi2("sgad");
+        */
+
+        // 이걸 고차 함수로 변환
+        //매개변수로 함수를 받는 함수를 고차함수라고 합니다.
+        //매개변수로 함수를 전달받는 함수이다.
+
+        //기능:인사하ㅣ
+        //입력(매개변수): 인사할 포멧형식 콜백(매개변수로 전달되는 함수)
+        function fi(k,name) { //k는 함수
+            alert(k()+name);
+        }
+
+        function formater(params) {
+            return "안녕하세요";
+        }
+
+        function formater2(params) {
+            return "안녕하세요2";
+        }
+
+        fi( formater,"name");// formater콜백함수
+        fi( formater2,"name");//formater2콜백함수
+
+        // 콜백 함수 함수 호출시 전달되는 함수
+        //도는 고차 함수의 매개 변수로 전달되는 함수를 말함.
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let tutle={
+            이름:"심청이" ,
+            종: "페닐슐라쿠터",
+            나이:3,
+            색깔: "초록색",
+            무게 : "800g",
+            좋아하는음식:["거북이사료" ,"건새우"],
+            
+            printInfo : function () {
+                alert(this.이름+this.나이);
+                alert(`${this.이름} ${this.나이} 입니다.`);
+            },
+
+            eat : function (food){
+                if(food ==="건새우"){
+                    alert("좋아");
+                }else{
+                    alert("싫어");
+                }
+            }
+        };
+
+        //객체의 매서드 함수에서 객체의 속성을 접근하려면 this키워드 사용
+        //this=자기자신을 의미함
+
+        console.log(tutle.이름);
+        console.log(tutle.종);
+        console.log(tutle["색깔"]);
+        tutle.printInfo();
+        tutle.eat("건새우");
+
+
+    </script>
+</body>
+</html>

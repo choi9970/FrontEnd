@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div id="result"></div>
+    <script>
+let date=new Date("2025-07-14"); //6개월후
+date.setDate(date.getDate()+180);
+
+let year=date.getFullYear();
+let month= date.getMonth()+1;
+let day=date.getDate();
+document.getElementById("result").innerHTML=year+"/"+month+"/"+day+"년도";
+
+          //시작인덱스, 가져올 개 수 
+          // 문자열의 일부를 가져올 때 사용
+        let result3 =str.substring(7,11);
+        console.log( result3);
+ 
+        
+        let str2="2025-07-28";
+        let result4= str2.split("-");  //구분자로 나눠서 배열로 반환함  
+        console.log( result4);      
+</script>h
+</body>
+</html>

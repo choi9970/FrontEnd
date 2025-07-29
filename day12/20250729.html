@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//1. 크리스마스까지 몇일 남았나요?
+        let today = new Date();
+        let myDay = new Date(2025, 11, 25);
+
+        let diffTime = myDay - today;
+
+        // 밀리초를 일(day)로 변환
+        let diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+        console.log(diffDays);
+
+
+//2. 오늘 기준 100일 후?
+        
+        
+    let dateAfter100 = new Date();
+    dateAfter100.setDate(today.getDate() + 100);
+    document.write('100일 후 : ' + dateAfter100.toLocaleDateString() + '<br>');
+
+//3. 오늘 날짜를 출력하세요 
+console.log(today.toLocaleDateString());
+
+//4. const snack = {
+//    name: "감자칩", 
+//    price: 1500,
+//    stock: 50, 
+//    flavors: ["original", "cheese"],
+//    manufacturing: {
+//        country: "Korea",
+//        factory: "경기도 안양  공장"
+//    },
+//    promotions: {
+//        discount: 10, // 10% 할인
+//        offerValidUntil: "2025-01-31"
+//    }
+//};
+//
+//  문제)         
+//   맛(flavors) 종류 출력하기 
+//   promotions의  discount정보 출력하기 
+//
+
+const snack = {
+    name: "감자칩", 
+    price: 1500,
+    stock: 50, 
+    flavors: ["original", "cheese"],
+    manufacturing: {
+        country: "Korea",
+        factory: "경기도 안양  공장"
+    },
+    promotions: {
+        discount: 10, // 10% 할인
+        offerValidUntil: "2025-01-31"
+    },
+
+    getFlaver : function () {
+        this.flavors.forEach(element => {
+            console.log(element);
+        });
+        
+    }
+};
+
+snack.getFlaver();
+
+    </script>
+</body>
+</html>

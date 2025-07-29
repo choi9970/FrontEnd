@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let snack={
+            이름:"맛동산" ,
+            메이커: "해태",
+            가격:3500,
+            
+            printInfo : function () {
+                alert(this.이름+this.메이커);
+                alert(`${this.이름} ${this.가격} 입니다.`);
+            },
+
+            eat : function (food){
+                if(food ==="건새우"){
+                    alert("좋아");
+                }else{
+                    alert("싫어");
+                }
+            }
+        };
+
+        snack.printInfo();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // reduce
+        let a =new Array(6);
+        a.fill(10);
+        console.log(a);
+        //console.log(a.reduce((acc,item)=>acc+item,0));
+        console.log(a.reduce((acc,item)=>acc-item,100));
+
+        //map
+        let b=[10,20,30,40];
+        console.log(b.map(item => item*2 ));
+
+        //foreach
+        let c=[20,30,40,50];
+        let sum=0;
+        c.forEach(element => {
+            sum+=element
+        });
+        console.log(sum);
+
+        /**
+         * fakeFactory
+         * fakeReduce
+        */
+       function fakeReduce(array) {
+            let sum=0;
+            for (let index = 0; index < array.length; index++) {
+                sum+=array[index];
+            } 
+            return sum;
+       }
+
+       let testA =new Array(6);
+        testA.fill(10);
+        console.log("fakeReduce"+fakeReduce(testA));
+
+        /**
+         * fakeFactory
+         * fakeMap
+         * 
+        */
+        function myMap(params) {
+            let testB=[10,20,30,40];
+            let testNewB =new Array(0);
+            testB.forEach(element => { 
+                testNewB.push(params(element));
+            });
+            return testNewB;
+            
+        }
+
+
+
+        
+        let resultArr = myMap(function (testB) { return testB*2 });
+        console.log("=======");
+        console.log(resultArr);
+
+
+
+
+
+    </script>
+</body>
+</html>

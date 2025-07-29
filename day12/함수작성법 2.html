@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //함수 표현식
+        //함수는 변수에 저장하고 사용하는 문법
+        //호이스팅 되지 않음
+        //함수 선언후 호출 필요
+
+
+        hap10(); // 안됨
+
+        let hap10=function () {
+          alert("test");  
+        };
+        
+        //hap10();
+        
+        let sum10=function(){
+            let sum=0;
+            for (let index = 0; index <= 10; index++) {
+                sum+=index;
+                
+            }
+            alert(sum);
+        };
+
+        sum10();
+
+
+        let sum10Ver2=function(){
+            let sum=0;
+            for (let index = 0; index <= 10; index++) {
+                sum+=index;
+                
+            }
+           return sum;
+        };
+
+        let result= sum10Ver2();
+    </script>
+</body>
+</html>
