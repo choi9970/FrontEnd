@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function change() {
+       let item1 = document.querySelector("#item1");
+       item1.style.backgroundColor="blue";
+    }
+    function unchange() {
+        let item2 = document.querySelector(".item2");
+        item2.style.backgroundColor="red";
+    }
+</script>
+<body>
+    <!--querySeleter를 이용해서 요소 선택
+    한개 반환
+    -->
+    <div id="item1">test</div>
+    <div class="item2">teset</div>
+    
+    <button onclick="change()">스타일적용</button>
+    <button onclick="unchange()">취소</button>
+
+</body>
+</html>

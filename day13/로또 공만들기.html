@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function MakeBall() {
+        const numbers = [];
+
+        while (numbers.length < 6) {
+        const num = Math.floor(Math.random() * 45) + 1; // 1부터 45까지
+
+            if (!numbers.includes(num)) {
+                numbers.push(num);
+            }
+        }
+        
+       
+        const test=document.getElementById("test");
+        test.style.display="flex";
+        test.innerHTML="";
+
+        numbers.forEach(element => {
+
+            let makeball=document.createElement("div");
+            makeball.style.borderRadius="50%"
+            makeball.style.width="50px";
+            makeball.style.height="50px";
+            makeball.innerHTML=element;
+            makeball.style.gap="100px";
+            makeball.style.backgroundColor="blue";
+            makeball.style.textAlign="center";
+            
+            test.appendChild(makeball);
+
+
+        });
+
+        
+        
+        
+
+        
+    }
+</script>
+<body>
+    <h1>로또 공만들기</h1>
+    <div id="test"></div>
+    <button onclick="MakeBall()">공을 만들어 주세요.</button>
+</body>
+</html>

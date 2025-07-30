@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function change() {
+       let item2 = document.querySelectorAll(".item2");
+       item2.forEach(element => {
+        element.style.backgroundColor="red";
+       });
+    }
+    function unchange() {
+        let item2 = document.querySelector(".item2");
+        item2.style.backgroundColor="red";
+    }
+</script>
+<body>
+    <!--querySelecterALL로 요소 선택
+    주의 사항: 모두선택 하기 임으로 배열로 변환되서 반환
+    -->
+    
+    <div class="item2">teset</div>
+    <div class="item2">teset</div>
+    
+    <button onclick="change()">스타일적용</button>
+    <button onclick="unchange()">취소</button>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        function change() {
+            //alert();
+            const wrap=document.getElementById("wrap");
+            wrap.style.width="100px";
+            wrap.style.height="100px";
+            wrap.style.lineHeight="100px";
+            wrap.style.backgroundColor="green";
+            wrap.innerHTML="내용바뀜";
+        }
+
+        function unchange() {
+            //alert();
+            const wrap=document.getElementById("wrap");
+            wrap.style.width="";
+            wrap.style.height="";
+            wrap.style.lineHeight="";
+            wrap.style.backgroundColor="";
+            wrap.innerHTML="내용바뀜2";
+
+            
+        }
+
+    </script>
+</head>
+<body>
+    <!--DOM다루기-->
+    <!--웨문서를 자바스크립트에서 사용할 수 잇도록 객체역활로 적용함-->
+    <!--id로 선택하기-->
+    <!--id가 wrap인 요소를 선택하여 스타일 변경하기-->
+
+    <div id="wrap">스타일 적용</div>
+    <button onclick="change()">스타일적용</button>
+    <button onclick="unchange()">스타일 취소</button>
+
+</body>
+</html>

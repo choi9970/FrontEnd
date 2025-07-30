@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function change() {
+        //베열로 옴
+        const item=document.getElementsByClassName("item");
+        console.log(item[0]);
+        item[0].style.backgroundColor="green";
+    }
+    function unchange() {
+        const item=document.getElementsByClassName("item")[0];
+        item.style.backgroundColor="red";
+    }
+</script>
+<body>
+    <!--clss이름으로 선택하기
+    class이름 item 요소 선택하여 스타일 변경
+    주의: 선택된 요소가 한개라도 배열로 반환
+    -->
+
+    <div class="item">요소</div>
+    <button onclick="change()">스타일적용</button>
+    <button onclick="unchange()">취소</button>
+
+</body>
+</html>

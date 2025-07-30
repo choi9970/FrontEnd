@@ -7,14 +7,14 @@
 </head>
 <body>
     <script>
-        // reduce
+        // reduce 누적값
         let a =new Array(6);
         a.fill(10);
         console.log(a);
         //console.log(a.reduce((acc,item)=>acc+item,0));
         console.log(a.reduce((acc,item)=>acc-item,100));
 
-        //map
+        //map 새로운 배열에 대한 배열 리턴 
         let b=[10,20,30,40];
         console.log(b.map(item => item*2 ));
 
@@ -59,8 +59,8 @@
 
 
 
-        
-        let resultArr = myMap(function (testB) { return testB*2 });
+        let testB=[10,20,30,40];
+        let resultArr = myMap(testB, function (testB) { return testB*2 });
         console.log("=======");
         console.log(resultArr);
 
