@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function addaTag() {
+            const addaTag=document.createElement("a");
+            addaTag.href="https://special-rainstorm-825.notion.site/HTML-CSS-173c031ede41807181ccf2d167d03650";
+            addaTag.target="_blank"
+            addaTag.innerText="js교과서";
+            addaTag.classList.add("test");
+
+            const wrap=document.getElementById("wrap");
+            wrap.appendChild(addaTag);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="addaTag()">p태그 생성</button>
+    <!--부모영역으로 정하기-->
+    <div id="wrap"></div>
+    
+</body>
+</html>

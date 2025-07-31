@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            border: 1px solid black;
+            position: absolute;
+        }
+        .main > div{
+            width: 300px;
+            height: 200px;
+            border: 1px solid rgb(38, 3, 240);
+            
+        }
+        button{
+            position: relative;
+            bottom: 0px;
+            top: 160px; 
+            left: 80%;
+            font-size: 10px;
+           
+        }
+    </style>
+    <script>
+       
+        function test(obj) {
+
+            let div = obj.closest("div");
+            let main = div.parentElement;        // .main
+            let children = Array.from(main.children);
+            let index = children.indexOf(div);  // 0이면 첫번째, 1이면 두번째
+            let new_div=document.createElement("div");
+
+            new_div.className="cc";
+            if(index==0){             
+                new_div.style.width = "50px";
+                new_div.style.height = "50px";
+                new_div.style.background = "yellow";
+                new_div.style.color = "black";
+                new_div.style.fontSize = "18px";
+                new_div.style.display = "flex";
+                new_div.style.justifyContent = "center";
+                new_div.style.alignItems = "center";
+                new_div.style.clipPath = "polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)";
+                new_div.style.userSelect = "none";
+                new_div.style.textAlign = "center";  
+                new_div.style.fontSize = "5px";              
+                new_div.innerHTML="금 100돈";           
+
+            }else{
+                new_div.style.borderRadius="50%";
+                new_div.style.backgroundColor="cadetblue";
+                new_div.style.width= "50px";
+                new_div.style.height= "50px";
+                new_div.style.fontSize = "10px";
+                new_div.style.display = "flex"; //꼭 필요함
+                new_div.style.alignItems = "center";
+                new_div.style.textAlign = "center";
+                new_div.style.justifyContent = "center";
+                new_div.innerHTML="다이아몬드<br>10캐럿";
+
+ 
+            }
+            div.appendChild(new_div); 
+            if(index==0){
+                const  cc   =children[1].querySelectorAll(".cc");
+                console.log(cc);
+                if( cc.length !=0){
+                    cc.forEach(element => {
+                        element.remove();
+                    });
+                } 
+            }else{
+               const  cc   =children[0].querySelectorAll(".cc");
+                if( cc.length !=0){
+                    cc.forEach(element => {
+                        element.remove();
+                    });
+                }
+            }
+
+        
+    }
+
+    </script>
+</head>
+<body>
+    <h1>closest를 사용해서 버튼 클릭하면 보물의 내용가져오기</h1>
+<div class="main">
+
+        <div class="box"> 
+
+            <button onclick="test(this)">클릭</button>
+        </div>
+        <div class="box">
+            <button onclick="test(this)">클릭</button>    
+     
+        </div>
+</div>
+</body>
+</html>
