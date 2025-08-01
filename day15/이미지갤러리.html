@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gallry-wrap{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            position: relative;
+        }
+        .gallry-wrap{
+            width: 300px;
+            height: 300px;
+            border: 1px solid rgb(209, 10, 10);
+            
+        }
+         .prev {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -10px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 50px;
+
+        }
+        .next {
+            position: absolute;
+            top: 50%;
+            right: -10px;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 50px;
+        }
+        .gallery{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+
+            background-image: url(media/Penguins.png);
+            background-position: center;
+            background-size: cover;
+        }
+
+    </style>
+    <script>
+            let imgNames= ["media/Penguins.png", 
+             "media/Lighthouse.png",
+             "media/Chrysanthemum.png",
+             "media/Desert.png",
+             "media/Hydrangeas.png",
+             "media/Jellyfish.png",
+             "media/Koala.png",
+             "media/Tulips.png"
+            ] ;
+
+            
+
+            let index=0;
+            function next() {
+                index++;
+                if( index  >= imgNames.length){
+                    index=0;
+                }
+                const gallery =document.querySelector(".gallery");
+                gallery.style.backgroundImage="url("+imgNames[index]+")";
+                gallery.style.backgroundPosition="center"
+                gallery.style.backgroundSize="cover";
+            }
+
+
+            function prev() {
+                index--;
+                if( index  < 0){
+                    index=imgNames.length-1;
+                }
+                const gallery =document.querySelector(".gallery");
+                gallery.style.backgroundImage="url("+imgNames[index]+")";
+                gallery.style.backgroundPosition="center"
+                gallery.style.backgroundSize="cover";
+            }
+
+    </script>
+</head>
+<body>
+    <div class="gallry-wrap">
+        <div class="gallery"></div>
+        <div class="prev" onclick="prev()">&laquo;</div> <!-- « (왼쪽 이중 화살표) -->
+        <div class="next" onclick="next()">&raquo;</div> <!-- » (오른쪽 이중 화살표) -->
+    </div>
+</body>
+</html>

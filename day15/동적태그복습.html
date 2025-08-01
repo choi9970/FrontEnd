@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function addItem() {
+        let new_li=document.createElement("li");
+        let text=document.getElementById("item");
+        new_li.innerHTML=`<span>${text.value}</span><button onclick="itemRemove(this)">삭제</button>`;
+        let id= document.getElementById("item_list");
+        id.appendChild(new_li);
+
+    }
+    function itemRemove(obj) {
+        let li=obj.closest("li");
+        li.remove();
+    }
+</script>
+<body>
+    <input type="text" id="item">
+    <button onclick="addItem()">추가</button>
+    <ul id="item_list">
+        <!--li추가-->
+    </ul>
+</body>
+</html>
