@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>순환 이미지 갤러리</title>
+  <style>
+    .container {
+      display: flex;
+      height: 400px;
+      width: 300px;
+      border: 1px solid #ccc;
+    }
+
+    .left-gallery {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100px;
+      overflow: hidden;
+      position: relative; 
+    }
+
+    .image-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .image-list img {
+      width: 80px;
+      height: 80px;
+      margin: 5px 0;
+      object-fit: cover;
+      border: 1px solid #aaa;
+    }
+
+    .buttons {
+      position: absolute; 
+      width: 100%;   
+   
+      background: rgba(255, 255, 255, 0.7);
+      z-index: 1;
+      padding-top: 5px;
+    }
+
+    .up{
+
+
+      top:0;
+    }
+
+
+    .down{
+      bottom: 0;
+    }
+
+    .buttons button {
+      width: 80%;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="left-gallery">
+
+    <button onclick="scrollUp()"      class="buttons up">▲</button>
+    <button onclick="scrollDown()"  class="buttons  down">▼</button>
+  
+    <div class="image-list" id="imageList">
+      <!-- 이미지가 동적으로 들어갈 부분 -->
+    </div>
+  </div>
+</div>
+
+<script>
+  const images = [
+    'https://image2.lotteimall.com/goods/14/55/76/1860765514_14.jpg/dims/resizemc/640x360/optimize',
+    'https://image2.lotteimall.com/goods/36/38/40/3046403836_14.jpg/dims/resizemc/640x360/optimize',
+    'https://image2.lotteimall.com/goods/43/84/33/3063338443_14.jpg/dims/resizemc/640x360/optimize',
+    'https://image2.lotteimall.com/goods/27/47/35/3062354727_14.jpg/dims/resizemc/640x360/optimize',
+    'https://image2.lotteimall.com/goods/32/63/23/2902236332_14.jpg/dims/resizemc/640x360/optimize',
+    'https://image2.lotteimall.com/goods/51/83/77/1982778351_14.jpg/dims/resizemc/640x360/optimize',
+    'https://image2.lotteimall.com/goods/87/65/96/2623966587_3.jpg/dims/resizemc/640x360/optimize',
+    'https://image2.lotteimall.com/goods/30/64/58/2992586430_14.jpg/dims/resizemc/640x360/optimize',
+  ];
+
+  const visibleCount = 6; // 보여질 이미지 개수
+  let startIndex = 0;     // 시작 인덱스   (0~5)
+
+  const listEl = document.getElementById('imageList');
+
+  function renderImages() {
+    listEl.innerHTML = ''; // 기존 이미지 제거
+    for (let i = 0; i < visibleCount; i++) {
+
+      
+     const index = (startIndex + i) % images.length;
+
+      const img = document.createElement('img');
+      img.src = images[index];
+      listEl.appendChild(img);
+    }
+  }
+
+  function scrollUp() {
+    startIndex = (startIndex - 1 + images.length) % images.length;   // 
+    renderImages();
+  }
+
+  function scrollDown() {
+    startIndex = (startIndex + 1) % images.length;
+    renderImages();
+  }
+
+  // 초기 렌더링
+  renderImages();
+</script>
+
+</body>
+</html>

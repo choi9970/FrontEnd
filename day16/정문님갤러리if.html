@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>순환 이미지 갤러리</title>
+  <style>
+    .container {
+      display: flex;
+      height: 400px;
+      width: 300px;
+      border: 1px solid #ccc;
+    }
+
+    .left-gallery {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100px;
+      overflow: hidden;
+      position: relative; 
+    }
+
+    .image-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .image-list img {
+      width: 80px;
+      height: 80px;
+      margin: 5px 0;
+      object-fit: cover;
+      border: 1px solid #aaa;
+    }
+
+    .buttons {
+      position: absolute; 
+      width: 100%;   
+      background: rgba(255, 255, 255, 0.7);
+      z-index: 1;
+      padding-top: 5px;
+    }
+
+    .up {
+      top: 0;
+    }
+
+    .down {
+      bottom: 0;
+    }
+
+    .buttons button {
+      width: 80%;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="left-gallery">
+    <button onclick="scrollUp()" class="buttons up">▲</button>
+    <button onclick="scrollDown()" class="buttons down">▼</button>
+
+    <div class="image-list" id="imageList">
+      <!-- 이미지가 동적으로 들어갈 부분 -->
+    </div>
+  </div>
+</div>
+
+<script>
+  const images = [
+    'https://image2.lotteimall.com/goods/14/55/76/1860765514_14.jpg/dims/resizemc/640x360/optimize',   //0
+    'https://image2.lotteimall.com/goods/36/38/40/3046403836_14.jpg/dims/resizemc/640x360/optimize',  //1
+    'https://image2.lotteimall.com/goods/43/84/33/3063338443_14.jpg/dims/resizemc/640x360/optimize',   //2
+    'https://image2.lotteimall.com/goods/27/47/35/3062354727_14.jpg/dims/resizemc/640x360/optimize',   //3
+    'https://image2.lotteimall.com/goods/32/63/23/2902236332_14.jpg/dims/resizemc/640x360/optimize',    //4
+    'https://image2.lotteimall.com/goods/51/83/77/1982778351_14.jpg/dims/resizemc/640x360/optimize',    //5
+    'https://image2.lotteimall.com/goods/87/65/96/2623966587_3.jpg/dims/resizemc/640x360/optimize',     //6
+    'https://image2.lotteimall.com/goods/30/64/58/2992586430_14.jpg/dims/resizemc/640x360/optimize',   //7
+  ];
+
+  const visibleCount = images.length;
+  let startIndex = 0;
+  const listEl = document.getElementById('imageList');
+
+  function renderImages() {
+
+
+    /*
+    
+     index = startIndex+i 
+    */
+    listEl.innerHTML = '';
+    for (let i = 0; i < visibleCount; i++) {
+      let index = startIndex + i;
+      
+      if (index >= images.length) {
+          index = index - images.length;    //    
+      }
+
+      const img = document.createElement('img');
+      img.src = images[index];
+      listEl.appendChild(img);
+    }
+  }
+
+  function scrollUp() {
+    startIndex = startIndex - 1;
+    if (startIndex < 0) {
+      startIndex = images.length - 1;
+    }
+    renderImages();
+  }
+
+  function scrollDown() {
+    startIndex = startIndex + 1;
+    if (startIndex >= images.length) {
+      startIndex = 0;
+    }
+    renderImages();
+  }
+
+  renderImages(); // 초기 렌더링
+
+  /*
+  startIndex=0 인데  위로 발생
+
+  startIndex =7
+
+
+      위로       
+  0    7    
+  1    8 - 8(0)
+  2    9 - 8(1)
+  3    10 -8(2)
+  4    11 -8(3)
+  5    12 -8(4)
+  6    13 -8(5)
+  7    14 -8(6)
+
+  startIndex =6
+
+
+      위로       
+  0    6     
+  1    7 
+  2    8 -8(0)
+  3    9 -8(1)
+  4    10-8 (2)
+  5    11-8 (3)
+  6    12-8(4)
+  7    13-8 (5)
+
+
+
+
+
+startIndex =7
+
+     
+  0    7 
+  1    8  - 8(0)
+  2    9  -8(1)
+  3    10 -8(2)
+  4    11 -8(3)
+  5    12 -8(4)
+  6    13 -8(5)
+  7    14 -8(6)
+ 
+
+ 두번째 경우 ###################################
+
+    startIndex=0 인데  아래로 발생
+
+
+   startIndex =1
+
+
+      아래로      
+  0    1    
+  1    2  
+  2    3 
+  3    4  
+  4    5 
+  5    6  
+  6    7  
+  7    8 -8(6)
+
+
+
+startIndex =2
+
+
+      아래로      
+  0    2    
+  1    2  
+  2    4 
+  3    5  
+  4    6 
+  5    7  
+  6    8-8(0)  
+  7    9-8(1)
+
+
+  startIndex =3
+
+
+      아래로      
+  0    3    
+  1    4  
+  2    5 
+  3    6  
+  4    7 
+  5    8 -8 (0) 
+  6    9 -8 (1)
+  7    10-8 (2)
+
+
+  */
+</script>
+
+</body>
+</html>

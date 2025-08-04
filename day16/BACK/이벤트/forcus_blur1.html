@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            transition: 1s;
+        }
+    </style>
+    <script>
+        //기능:포커스가 오면 style길이를 길게
+        //입력 (매개 변수): input 태그정보(this)
+        //반환 x
+        function a(obj) {
+            console.log("obj");
+            obj.style.width="300px"
+        }
+        function b(obj) {
+            console.log("obj");
+            obj.style.width="100px"
+            
+        }
+    </script>
+</head>
+<body>
+    <h2> focus, blur 이벤트 처리 </h2>
+    <p> focus :  해당 요소에 포커스가 왔을 때 발생</p>
+    <p> blur  :  포커스가 왔다가 포커스를 잃을때 발생</p>
+    
+    <input type="text" placeholder="검색.." onblur="b(this)" onfocus="a(this)">
+</body>
+</html>

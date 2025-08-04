@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let message = [
+        "우주연",
+        "유승재",
+        "김민희",
+        "김서호",
+        "김인국",
+        "김현희",
+      ];
+
+      let i = 0;
+      function next() {
+        //alert("ㄴㅇㄴ?")
+
+        const icon = document.querySelector(".icon");
+
+        icon.textContent=message[i];
+
+        i = i + 1;
+
+        if (i >= message.length) {
+          i = 0;
+        }
+      }
+    </script>
+  </head>
+  <body>
+
+  <div class="wrap">
+    <div class="icon">
+        에이콘아카데미
+    </div>
+  </div>
+
+  <button onclick="next()">다음</button>
+  </body>
+</html>

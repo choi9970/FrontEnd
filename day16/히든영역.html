@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+    </script>
+    <style>
+        ul{
+            width: 300px;
+            height: 300px;
+            list-style: none;
+            text-align: center;
+            position: relative;
+            border: 1px solid rgb(247, 54, 5);
+
+
+            padding: 0;
+        }
+        li{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+        }
+        li img{
+            width: 300px;
+            height: 200px;
+        }
+        .hidden_wrap{
+            border: 1px solid black;
+            width: 100%;
+            height: 100%;
+            background-color: aqua;
+            position: absolute;
+            top: 0;
+            left: 0;
+            
+            opacity: 0;
+
+            transition: 1s;
+        }
+
+        li:hover .hidden_wrap{
+            opacity: 0.8;
+        }
+
+        .hidden_wrap li{
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <img src="https://cdn.inflearn.com/public/courses/328592/cover/b8957940-b416-4f31-8ae1-1cd2c5b29f3a/HTML-CSS--IFL.png?f=avif" alt="">
+            <p>알코의 html강좌</p>
+            <p>초보과정</p>
+
+            <div class="hidden_wrap">
+                <p>html 강좌</p>
+                <p>알코 강좌</p>
+                <p>444000원</p>
+                <button>구매</button>
+            </div>
+        </li>
+    </ul>
+    
+</body>
+</html>
