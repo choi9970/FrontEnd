@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>갤러리</title>
+</head>
+<body>
+
+    <div class="item"></div>
+
+    <button id="btn" onclick="nextItem()">다음</button>
+
+    <script>
+        const arr = ["맥도날드-고구마", "맥도날드-상하이"];
+        const itemDiv = document.querySelector(".item");
+        let i = 0;
+
+        // URL에서 현재 인덱스 가져오기
+        const params = new URLSearchParams(window.location.search);
+        const currentItem = params.get("item");
+        if (currentItem) {
+            const index = arr.indexOf(currentItem);
+            if (index !== -1) {
+                i = index;
+                itemDiv.innerHTML = arr[i];
+            }
+        } else {
+            itemDiv.innerHTML = arr[i];
+        }
+
+        function nextItem() {
+            i = (i + 1) % arr.length; // 반복 순환
+            itemDiv.innerHTML = arr[i];
+
+            // URL 변경 (히스토리 스택 추가)
+            const newUrl = `${location.pathname}?item=${encodeURIComponent(arr[i])}`;
+            history.pushState({}, '', newUrl);
+        }
+
+        // 뒤로 가기/앞으로 가기 했을 때도 내용 변경
+        window.addEventListener('popstate', () => {
+            const params = new URLSearchParams(location.search);
+            const item = params.get("item");
+            if (item && arr.includes(item)) {
+                i = arr.indexOf(item);
+                itemDiv.innerHTML = item;
+            }
+        });
+    </script>
+
+</body>
+</html>
